@@ -2,24 +2,37 @@
 <html>
   <head>
       <!-- Include Dexie -->
+      <title>RailsConf2017-SaveATalk</title>
       <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
       <link rel="stylesheet" href="css/application.css">
       <link rel="stylesheet" href="css/siteSpecific.css">
       <script src="js/application.js"></script>
       <script src="js/siteSpecific.js"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
   <body>
-      <main class="main">
-        <div>
-            <h1>UNOFFICAL RailsConf2017 SaveATalk</h1>
-            <p>all design credit and all data are provided by <a href="https://railsconf.com/schedule">RailsConf2017 </a> </p>
-        </div>
-        <div>
-           <ul id="savedItemList">
-
-           </ul>
-        </div>
+        <main class="main">
+            <section class="section">
+                <div class="section__inner">    
+                    <div>
+                        <h1 class="centerText">UNOFFICIAL RailsConf2017 SaveATalk</h1>
+                        <p class="centerText credit">all design credit and all data are provided by <a class="link" href="https://railsconf.com/schedule">RailsConf2017 </a> </p>
+                    </div>
+                    <div>
+                        <p>NOTES: </p>
+                        <ul>
+                            <li>- must refresh page to see items in my schedule (fixing soon....)</li>
+                            <li>- there's a bug when saving workshops -- they all get selected (fixing soon....)</li>
+                            <li>- The first keynote of the day is not getting sorted properly -- sorry David! (fixing soon....)</li>
+                            <li>- Made by <a href="https://twitter.com/albinosquirrel" class="link" target="_new">@albinosquirrel</a></li>
+                        </ul>
+                        <button id="refresh">Refresh</button>
+                        <button id="clearItems">Clear All</button>
+                        
+                    </div>
+                </div>
+            </section>
 
 
 <section class="section">
@@ -29,7 +42,12 @@
         <nav class="js-schedule-tabs">
           <ol class="rc-schedule-nav js-tablist" data-existing-hx="h2">
             <li class="rc-schedule-nav__item js-schedule-item">
-              <a class="rc-schedule-nav__link js-schedule-link active" href="#tuesday" id="label_tuesday">
+              <a class="rc-schedule-nav__link js-schedule-link active" href="#mySchedule" id="label_mySchedule">
+                My Schedule
+              </a>
+            </li>
+            <li class="rc-schedule-nav__item js-schedule-item">
+              <a class="rc-schedule-nav__link js-schedule-link" href="#tuesday" id="label_tuesday">
                 Tuesday, April 25th
               </a>
             </li>
@@ -45,12 +63,22 @@
             </li>
           </ol>
         </nav>
+        <div class="rc-schedule-day js-schedule-day" id="mySchedule" style="display: block;">
+            <ol class="rc-schedule-list myScheduleList">
+                 
+            </ol>
+        </div>
+
+
+
+
+
         <div class="rc-schedule-day js-schedule-day" id="tuesday" style="display: block;">
           <!--h2 class="rc-schedule-day__title">
             Tuesday, 4/25
           </h2-->
           <ol class="rc-schedule-list">
-                  <li class="rc-schedule-list-item rc-schedule-list-item--keynote">
+        <li class="rc-schedule-list-item rc-schedule-list-item--keynote">
       <h4 class="rc-schedule-list-item__time rc-schedule-list-item__time--keynote">
         9:30AM - 10:30AM
       </h4>
@@ -2230,6 +2258,6 @@
 
 
     </section>
-    <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div></main>
+    <div>Icons made by <a class="link" href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon" class="link">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" class="link" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div></main>
   </body>
 </html>

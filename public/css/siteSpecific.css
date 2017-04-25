@@ -8,3 +8,35 @@ polygon.a.saved {
 h1 {
     font-size: 48px;
 }
+
+.centerText {
+    text-align: center;
+}
+
+.credit {
+    font-size: 34px;
+}
+
+.dayListItem {
+    width: 100%;
+    font-size: 24px;
+}
+
+#clearItems, #refresh {
+    padding: 1em;
+    font-size: 14px;
+    background-color:red;
+    color: #fff;
+}
+ #refresh {
+    padding: 1em;
+    font-size: 20px;
+    background-color: #853a7f;
+    color: #fff;
+}
+
+@media only screen and (min-width: 65em) {
+    .rc-schedule-nav__item {
+        flex-basis: 20%;
+    }
+}
