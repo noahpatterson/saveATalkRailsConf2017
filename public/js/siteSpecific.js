@@ -181,12 +181,14 @@ $(document).ready(function(){
                     // + ' talk name: ' + value.name + '</li>');
     }
 
-    $('#clearItems').click(deleteAll);
-    $('#refresh').click(refresh);
-    $('#label_mySchedule').click(refresh);
+    function reloadPageWithHash(hash) {
+       
+        location.assign(location.origin + hash);
+        location.reload();
+    }
 
     function refresh() {
-        location.reload();
+        reloadPageWithHash('#mySchedule');
     }
           
     function deleteAll() {
@@ -198,4 +200,12 @@ $(document).ready(function(){
         });
         
     }
+
+    $('#clearItems').click(deleteAll);
+    $('#refresh').click(refresh);
+    $('#label_mySchedule').click(refresh);
+
+    
+
+    
 });
