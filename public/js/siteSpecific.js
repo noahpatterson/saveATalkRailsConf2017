@@ -5,7 +5,12 @@ $(document).ready(function(){
 
     // Define your database
           //
+
+          // This works on all devices/browsers, and uses IndexedDBShim as a final fallback 
+        var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
+
           var db = new Dexie("talkSave_database");
+        //   var db = new Dexie("talkSave_database", {indexedDB: window.shimIndexedDB});
           db.version(1).stores({
               talks: 'name,speaker,room,track,isSaved,day,startTime,endTime'
           });
