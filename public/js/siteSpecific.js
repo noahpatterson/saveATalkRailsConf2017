@@ -183,6 +183,7 @@ $(document).ready(function(){
 
     $('#clearItems').click(deleteAll);
     $('#refresh').click(refresh);
+    $('#label_mySchedule').click(refresh);
 
     function refresh() {
         location.reload();
